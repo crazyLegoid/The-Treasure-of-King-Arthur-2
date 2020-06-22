@@ -36,6 +36,7 @@ class Diamond{
             this.health = 1;
             body2.health = 1;
             levelD = 1;
+            introS = 0;
             winS.play();
             
         }

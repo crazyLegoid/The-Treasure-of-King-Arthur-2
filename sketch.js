@@ -16,6 +16,7 @@ var levelD = 0;
 var intro;
 var dir = "right";
 var introS = 1;
+var foo;
 
 
 
@@ -29,7 +30,8 @@ function preload() {
   goodS = loadSound("sound/good.wav");
   jumpS = loadSound("sound/jump.wav");
   shootS = loadSound("sound/shoot.wav");
-  wall = loadImage("images/wall.png");
+  wall = loadImage("images/wall.png");
+
 
 }
 
@@ -76,7 +78,6 @@ function draw() {
     
     intro.display();
     level0();
-    storyVoice();
 
   }
 
@@ -99,7 +100,7 @@ function draw() {
     player.display();
     player.move();
     player.check(rock);
-
+    
   }
 
   if (stage === 2) {
@@ -185,13 +186,14 @@ function keyPressed() {
     if (keyIsDown(80)) {
       
       stage++;
-      introS = 0;
+      introS = 2;
 
     }
 
     if(keyIsDown(83)){
 
       intro.image = loadImage("images/Story.png");
+      storyVoice();
 
     }
 
@@ -537,8 +539,8 @@ function drawTiles() {
 
 function storyVoice() {
   
-  var foo = new p5.Speech();
-  foo.speak('Rumors have spread about the hidden treasure of King Arthur the second you a talented adventurer have found the position of the pyrimid he hid it in. But to find it, you will need to go through the dangerous path that he had set.');
+  foo = new p5.Speech();
+  foo.speak('Rumors have spread about the hidden treasure of King Arthur the second. You, a talented adventurer have found the position of the pyrimid he hid it in. But to find it, you will need to go through the dangerous path that he had set. Good luck. Press p to start. Press I for instructions');
 
 }
 

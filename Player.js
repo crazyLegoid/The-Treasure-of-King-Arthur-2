@@ -105,12 +105,16 @@ class Player {
 
         if (this.x < 0) {
 
-            stage--;
-            this.x = 780;
-
-            if (levelD === 1) {
-                
-                body.x = 1500;
+            if (introS === 0) {
+      
+                stage--;
+                this.x = 780;
+    
+                if (levelD === 1) {
+                    
+                    body.x = 1500;
+    
+                }
 
             }
 
