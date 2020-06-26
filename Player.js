@@ -98,12 +98,26 @@ class Player {
 
         if (this.x > 800) {
 
-            stage++;
-            this.x = 20;
+            if(introS === 2){
+
+                stage++;
+                this.x = 20;
+
+            } else if (stage === 5) {
+                
+                this.x = 800;
+
+            }
 
         }
 
         if (this.x < 0) {
+
+            if (introS === 2) {
+                
+                this.x = 0;
+
+            }
 
             if (introS === 0) {
       
