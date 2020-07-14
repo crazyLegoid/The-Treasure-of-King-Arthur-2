@@ -36,6 +36,7 @@ class Rock{
             
             body.x = 780;
             this.x = 1500;
+            deathS.play();
 
         }
 

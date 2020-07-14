@@ -6,14 +6,18 @@ class Spike{
         this.y = y;
         this.width = width;
         this.height = height;
+        this.image = loadImage("images/Spike (20).png")
 
     }
 
     display() {
         
-        fill(255);
+        fill("#c2b280");
+        stroke("#c2b280")
         rectMode(CENTER);
         rect(this.x, this.y, this.width, this.height);
+        imageMode(CENTER);
+        image(this.image, this.x, this.y, 50, 60);
 
     }
 

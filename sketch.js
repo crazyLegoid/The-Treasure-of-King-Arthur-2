@@ -37,7 +37,10 @@ function preload() {
 
 //setup
 function setup() {
-  createCanvas(800, 400);
+  let myCanvas = createCanvas(800, 400);
+  myCanvas.class("mycanvas");
+  //myCanvas.addClass("canvas");
+
   player = new Player(20, 380);
   ground = new Ground(400, 390, 800, 20);
   block = new Block(200, 50, 50, 100, 0.6);
@@ -56,7 +59,10 @@ function setup() {
   spike1 = new Spike(190, 360, 30, 40);
   spike2 = new Spike(340, 360, 30, 40);
   spike3 = new Spike(590, 360, 30, 40);
+
   diamond = new Diamond(400, 40, 40);
+ // diamond.class("mycanvas")
+
   rock = new Rock(1500, 200, 350);
 
   intro = new Intro(400, 200);

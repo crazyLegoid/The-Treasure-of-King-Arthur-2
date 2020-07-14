@@ -59,7 +59,7 @@ class Bullet {
             && body.y < this.y + this.height) {
 
                 
-                body.health -= 3;
+                body.health -= 1;
                 //console.log("hi");
                 body.enemyT = 1;
 
